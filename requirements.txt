@@ -1,0 +1,7 @@
+requests
+flask
+flask-limiter
+flask-mail
+timeloop
+apscheduler
+flask_apscheduler

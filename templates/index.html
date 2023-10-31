@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZJU 小龟充电助手</title>
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+
+<body>
+    <input id="token" style="display: none;">
+
+    <div id="overlay">
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#"><i class="fas fa-bolt"></i>ZJU
+            小龟充电助手</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#jump">一键跳转</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#charging-recommendation">充电推荐</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#subscription">空闲订阅</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#overview">情况总览</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sponsor">赞赏作者</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-warning" href="https://chat.xtitx327.top">【广告】生产力工具：国内可用的
+                        ChatGPT 网站</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container pt-4 pb-4">
+        <section id="jump" class="section mt-5">
+            <h4><i class="fas fa-magic"></i>一键跳转</h4>
+            <p class="text-success">若您在微信中打开本页面，可一键跳转到尼普顿充电桩页面，方便快捷；<strong>直接点击推荐列表和总览列表中的充电区域，也可以快速跳转哦</strong></p>
+            <a href="https://wx.hzxwwl.com/prod/charging/#/home"><button class="btn btn-primary"><i
+                        class="fas fa-link"></i>
+                    点击跳转</button></a>
+        </section>
+
+        <section id="charging-recommendation" class="section">
+            <h4><i class="fas fa-thumbs-up"></i>充电推荐</h4>
+            <div class="row">
+                <div class="col-md-4 mb-4" id="charging-recommendation-container">
+                    <div class="p-3" style="align-items: center; flex-direction: row;">
+                        <span class="spinner-border"></span>&nbsp;&nbsp;正在拉取充电桩信息，请稍候……
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="subscription" class="section">
+            <h4><i class="fas fa-inbox"></i>空闲订阅</h4>
+            <p class="m-3">您可以选择一个没有空闲充电桩的充电区域并订阅，一旦此区域出现了空闲桩位，系统将发邮件通知您</p>
+            <form>
+                <div class="form-group input-group mb-3">
+                    <input type="text" class="form-control" id="email" placeholder="请输入浙大邮箱">
+                    <div class="input-group-append">
+                        <span class="input-group-text">@zju.edu.cn</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select class="form-control" id="location">
+                        <option>请选择充电区域</option>
+                    </select>
+                </div>
+                <div class="row align-items-center p-2">
+                    <button type="submit" class="btn btn-primary ml-2" id="subscribe">订阅</button>
+                    <span class="ml-2 mr-2 text-info">每个邮箱每天最多支持订阅 3 次</span>
+                </div>
+            </form>
+        </section>
+
+        <section id="overview" class="section">
+            <h4><i class="fas fa-list"></i>附近充电桩总览</h4>
+            <div class="row">
+                <div class="col-md-4 mb-4" id="all-charging-area-list">
+                    <div class="p-3" style="align-items: center; flex-direction: row;">
+                        <span class="spinner-border"></span>&nbsp;&nbsp;正在拉取充电桩信息，请稍候……
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsor" class="section">
+            <h4><i class="fas fa-money"></i>赞赏作者</h4>
+            <div class="card mt-3">
+                <p class="text-dark m-3 text-center">请作者喝杯奶茶吧～</p>
+                <img src="./static/sponsor.jpg" class="m-2"></img>
+            </div>
+        </section>
+    </div>
+
+    <script src="./static/swal2@8.js"></script>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>
