@@ -17,7 +17,7 @@ app = Flask(__name__)
 #   配置定时任务
 ####################
 
-scheduler = APScheduler(BackgroundScheduler)
+scheduler = APScheduler(BackgroundScheduler(job_defaults = {"max_instances": 4}))
 
 class ScheduleConfig:
     JSONIFY_PRETTYPRINT_REGULAR = True

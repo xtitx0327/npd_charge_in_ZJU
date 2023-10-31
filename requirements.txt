@@ -1,7 +1,7 @@
 requests
 flask
 flask-limiter
-flask-mail
+flask-cors
 timeloop
 apscheduler
-flask_apscheduler
+flask-apscheduler
